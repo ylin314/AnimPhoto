@@ -1,5 +1,5 @@
 name: animphoto
-description: "A new Flutter project."
+description: "AnimPhoto (瞬影) — an Android app for detecting, playing, losslessly converting and extracting videos from Android motion photos across OPPO, vivo, Xiaomi, Honor and Huawei formats."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

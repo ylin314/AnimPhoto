@@ -1,18 +1,18 @@
 # 瞬影 AnimPhoto
 
 <div align="center">
-  <img src="assets/icon/app_icon.png" alt="瞬影 AnimPhoto" style="width: 400px; max-width: 20%;" />
+  <img src="assets/icon/app_icon.png" alt="瞬影 AnimPhoto" style="width: 100px; max-width: 10%;" />
 </div>
 
-瞬影（AnimPhoto）是一个用于处理安卓动态照片（Live Photo / Motion Photo）的 Android 工具，采用 Flutter 构建，界面遵循 Material 3。
+瞬影（AnimPhoto）是一个用于处理动态照片的工具，采用 Flutter 构建。
 
-它可以自动扫描手机中所有品牌的动态照片，直接播放动态效果，将本机相册不支持的格式转换为本机相册支持的格式，并且可以将内嵌的视频提取为独立的 MP4 文件。
+它可以自动扫描手机中所有品牌的动态照片，直接播放动态效果，将本机相册不支持的格式转换为本机相册支持的格式，并且可以将内嵌的视频提取为独立的 MP4 文件。同时支持动态照片**分享**功能，通过 QQ 等不支持动态照片的软件发送后，接收方仍可播放动态效果，且支持在**网页中进行格式转换与保存**。
 
 ## 背景
 
 不同品牌手机的动态照片格式互不兼容：OPPO / vivo / 小米 / 荣耀 / 华为各有各的识别标记（XMP 私有命名空间、`LIVE_` 文件尾标等）。此外，动态照片通过 QQ 等聊天软件发送后，动态效果会丢失，只剩一张静态图片。
 
-从技术上讲，绝大多数安卓动态照片都是「合法图片 + 尾部追加视频」的复合文件，转换的本质是**无损字节搬运**：剥离来源品牌的标记，按目标品牌的识别规范重新组织并写入标记，全程不重新编码，画质零损失。
+从技术上讲，绝大多数动态照片都是「合法图片 + 尾部追加视频」的复合文件，转换的本质是**无损字节搬运**：剥离来源品牌的标记，按目标品牌的识别规范重新组织并写入标记，全程不重新编码，画质零损失。
 
 本工具可以用于这类动态照片的扫描、播放、转换与视频提取。
 
@@ -39,15 +39,14 @@
 * 构建依赖
   * Flutter SDK（3.44 或更新）
   * Android SDK（API 24+，含 platform-tools）
-  * （可选）Android Studio，用于设备调试
+  * Android Studio，用于设备调试
 
 ### 构建
 
 ```bash
-git clone <仓库地址> animphoto
+git clone https://github.com/ylin314/AnimPhoto
 cd animphoto
 flutter pub get
-flutter test
 flutter run -d <设备ID>       # 真机调试
 flutter build apk --release   # 发布包
 ```
@@ -63,4 +62,4 @@ flutter build apk --release   # 发布包
 | 华为 | ✅ | ✅ |
 | Google | ✅ | ✅ |
 
-> 当前版本暂不支持：纯血鸿蒙（HarmonyOS NEXT）与苹果（iOS）设备。纯血鸿蒙用户请等待独立的鸿蒙原生版本。
+> 当前版本暂不支持纯血鸿蒙与苹果设备。纯血鸿蒙版本正在开发， 预计在后续版本中支持；暂无适配苹果设备的计划。
